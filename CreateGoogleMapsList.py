@@ -7,12 +7,12 @@ from selenium.webdriver.support import expected_conditions as EC
 import time
 
 # Path to ChromeDriver
-chrome_driver_path = r"C:\Users\FIBI\Downloads\chromedriver-win64\chromedriver.exe"
+chrome_driver_path = r"C:\Users\David\Downloads\chromedriver-win64\chromedriver.exe"
 
-# Set up Chrome options to use your Profile 3
+# Set up Chrome options to use your Profile 1
 chrome_options = Options()
 chrome_options.add_argument(r"user-data-dir=C:\Users\FIBI\AppData\Local\Google\Chrome\User Data")
-chrome_options.add_argument(r'--profile-directory=Profile 3')
+chrome_options.add_argument(r'--profile-directory=default')
 
 # Set up the WebDriver
 service = Service(executable_path=chrome_driver_path)
@@ -20,13 +20,25 @@ driver = webdriver.Chrome(service=service, options=chrome_options)
 
 # List of restaurants with "Restaurant" added before "Phuket"
 restaurants = [
-    "Blue Elephant Restaurant Phuket", "The Charm Dining Gallery Restaurant Phuket", "Go Benz Restaurant Phuket", "Heh Restaurant Phuket", 
-    "Hong Khao Tom Pla Restaurant Phuket", "Go Ang Seafood Restaurant Phuket", "Chuan Chim Restaurant Phuket", 
-    "Khao Tom Thanon Di Buk Restaurant Phuket", "O Tao Bang Niao Restaurant Phuket", "Royd Restaurant Phuket", 
-    "O Cha Rot Restaurant Phuket", "Go La Restaurant Phuket", "Loba Bang Niao Restaurant Phuket", "One Chun Restaurant Phuket", 
-    "Roti Thaew Nam Restaurant Phuket", "Tu Kab Khao Restaurant Phuket", "Surf & Turf by Soul Kitchen Restaurant Phuket", 
-    "Shrimp Noodles Ao Kae Restaurant Phuket", "A Pong Mae Sunee Restaurant Phuket", "La Gaetana Restaurant Phuket"
+    "A Pong Mae Sunee Restaurant Phuket", "Acquat Restaurant Phuket", "Blue Elephant Restaurant Phuket", "Chom Chan Restaurant Phuket", 
+    "Chuan Chim Restaurant Phuket", "Go Ang Seafood Restaurant Phuket", "Go Benz Restaurant Phuket", "Go La Restaurant Phuket", 
+    "Gorjan Restaurant Phuket", "Heh Restaurant Phuket", "Hom Restaurant Phuket", "Hong Khao Tom Pla Restaurant Phuket", 
+    "Jadjan Restaurant Phuket", "Jampa Restaurant Phuket", "Jaras Restaurant Phuket", "Jongjit Kitchen Restaurant Phuket", 
+    "Kha Mu Boran (Kathu) Restaurant Phuket", "Khao Tom Thanon Di Buk Restaurant Phuket", "Khrua Ohm Restaurant Phuket", 
+    "Kin-Kub-Ei Restaurant Phuket", "Krua Baan Platong Restaurant Phuket", "Krua Kao Kuk Restaurant Phuket", 
+    "Krua Praya Restaurant Phuket", "Kruvit Raft (Ban Laem Hin) Restaurant Phuket", "La Gaetana Restaurant Phuket", 
+    "L'Arôme by the Sea Restaurant Phuket", "Lertrod Restaurant Phuket", "Loba Bang Niao Restaurant Phuket", 
+    "Meesapam Khun Yai Chian Restaurant Phuket", "Mook Manee Restaurant Phuket", "Mor Mu Dong Restaurant Phuket", 
+    "Mu Krop Chi Hong (Vichitsongkhram Road) Restaurant Phuket", "Naam Yoi Restaurant Phuket", "Nitan Restaurant Phuket", 
+    "Niyom Salt Grilled Duck Restaurant Phuket", "O Cha Rot Restaurant Phuket", "O Tao Bang Niao Restaurant Phuket", 
+    "One Chun Restaurant Phuket", "Pathongko Mae Pranee Restaurant Phuket", "Peang-Prai Restaurant Phuket", "PRU Restaurant Phuket", 
+    "Roti Chaofa Restaurant Phuket", "Roti Thaew Nam Restaurant Phuket", "Royd Restaurant Phuket", "Salaloy Restaurant Phuket", 
+    "Samut Restaurant Phuket", "Sang Ka Sri Restaurant Phuket", "Shrimp Noodles Ao Kae Restaurant Phuket", "Suay Restaurant Phuket", 
+    "Surf & Turf by Soul Kitchen Restaurant Phuket", "Ta Khai Restaurant Phuket", "Talung Thai Restaurant Phuket", 
+    "The Charm Dining Gallery Restaurant Phuket", "The Smokaccia Laboratory Restaurant Phuket", "The Thai Library Restaurant Phuket", 
+    "Ton Mayom Restaurant Phuket", "Tu Kab Khao Restaurant Phuket", "Wagyu Steakhouse Restaurant Phuket"
 ]
+
 
 # Open Google Maps
 driver.get('https://www.google.com/maps/')
